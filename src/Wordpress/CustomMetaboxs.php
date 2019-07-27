@@ -8,6 +8,8 @@
 
 namespace nacsl\Wordpress;
 
+use nacsl\App\Views\MetaboxViews;
+
 class CustomMetaboxs implements MetaboxInterfaces
 {
 
@@ -122,37 +124,22 @@ class CustomMetaboxs implements MetaboxInterfaces
 
     /**
      * CustomMetaboxs constructor.
-     * @param string $id
-     * @param string $title
-     * @param array $screen
-     * @param string $context
-     * @param string $priority
-     * @param array $form
+     * @param array $datas
      */
-    public function __construct( string $id, string $title, $screen, string $context, string $priority, array $form)
+//    public function __construct( string $id, string $title, $screen, string $context, string $priority, array $form)
+    public function __construct( array $datas )
     {
-        $this->setId        ( $id );
-        $this->setTitle     ( $title );
-        $this->setScreen    ( $screen );
-        $this->setContext   ( $context );
-        $this->setPriority  ( $priority );
-        $this->setFrom      ( $form );
+        $this->setId        ( $datas['id'] );
+        $this->setTitle     ( $datas['title'] );
+        $this->setScreen    ( $datas['screen'] );
+        $this->setContext   ( $datas['context'] );
+        $this->setPriority  ( $datas['priority'] );
+        $this->setFrom      ( $datas['form'] );
     }
 
     public function init()
     {
-        add_meta_box($this->getId(), $this->getTitle(), array($this, 'view'), $this->getScreen(), $this->getContext(), $this->getPriority());
-    }
-
-    public function view($post)
-    {
-        foreach ($this->getFrom() as $item) {
-            $val = get_post_meta($post->ID,$item['key'],true);
-            ?>
-            <label for="<?= $item['name'] ?>"><?= $item['label'] ?></label>
-            <input id="<?= $item['name'] ?>" type="<?= $item['type'] ?>" name="<?= $item['name'] ?>" value="<?= $val ?>" />
-            <?php
-        }
+        add_meta_box($this->getId(), $this->getTitle(), array(MetaboxViews::class, 'render'), $this->getScreen(), $this->getContext(), $this->getPriority(), $this->getFrom());
     }
 
     public function save($postID)

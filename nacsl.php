@@ -18,6 +18,7 @@ use nacsl\App\Config;
 use nacsl\App\Models\CptGroupes;
 use nacsl\App\Models\CptServices;
 use nacsl\App\Models\CptSousComites;
+use nacsl\App\Models\MboxGroupesCourriels;
 use nacsl\App\Models\TxFormats;
 use nacsl\App\Models\TxJours;
 use nacsl\App\Models\TxVilles;
@@ -44,27 +45,7 @@ $nacsl->execute(
         new CustomTaxonomies( CptGroupes::getName(), TxVilles::data() ),
 
         //add_meta_box('id_ma_meta', 'Ma metabox', 'ma_meta_function', 'post', 'side', 'high');
-        new CustomMetaboxs(
-            'id_ma_meta',
-            'Ma metabox',
-            CptGroupes::getName(),
-            'normal',
-            'high',
-            array(
-                [
-                    'label' => "Mon champ",
-                    'key'   => "_ma_valeur",
-                    'type'  => "text",
-                    'name'  => "mon_champ",
-                ],
-                [
-                    'label' => "Mon deuxieme champ",
-                    'key'   => "_mon_autre_valeur",
-                    'type'  => "text",
-                    'name'  => "mon_autre_champ",
-                ],
-            )
-        )
+        new CustomMetaboxs( MboxGroupesCourriels::data() )
     )
 );
 

@@ -42,27 +42,29 @@ class TxJours implements CustomsDataInterface
     {
         self::setName();
 
+        $td = Config::TEXTDOMAINE;
+
         $labels = array(
-            'name'                       => _x( 'Jours des réunions', 'Taxonomy General Name', 'nacsl' ),
-            'singular_name'              => _x( 'Jour de réunion', 'Taxonomy Singular Name', 'nacsl' ),
-            'menu_name'                  => __( 'Jours des réunions', 'nacsl' ),
-            'all_items'                  => __( 'Tous les jours', 'nacsl' ),
-            'parent_item'                => __( 'Jour parent:', 'nacsl' ),
-            'parent_item_colon'          => __( 'Jour parent:', 'nacsl' ),
-            'new_item_name'              => __( 'Nouveau Jour', 'nacsl' ),
-            'add_new_item'               => __( 'Ajouter un nouveau Jour', 'nacsl' ),
-            'edit_item'                  => __( 'Modifier un Jour', 'nacsl' ),
-            'update_item'                => __( 'Mettre à jour le Jour', 'nacsl' ),
-            'view_item'                  => __( 'Voir le Jour', 'nacsl' ),
-            'separate_items_with_commas' => __( 'Séparé les Jours avec une virgule', 'nacsl' ),
-            'add_or_remove_items'        => __( 'Ajouter ou retirer des Jours', 'nacsl' ),
-            'choose_from_most_used'      => __( 'Choisir parmi les plus populaires', 'nacsl' ),
-            'popular_items'              => __( 'Jours populaires', 'nacsl' ),
-            'search_items'               => __( 'Rechercher de Jours', 'nacsl' ),
-            'not_found'                  => __( 'Jour introuvable', 'nacsl' ),
-            'no_terms'                   => __( 'Aucun Jour', 'nacsl' ),
-            'items_list'                 => __( 'Liste de Jours', 'nacsl' ),
-            'items_list_navigation'      => __( 'Menu de la liste de Jours', 'nacsl' ),
+            'name'                       => _x( 'Jours des réunions', 'Taxonomy General Name', $td ),
+            'singular_name'              => _x( 'Jour de réunion', 'Taxonomy Singular Name', $td ),
+            'menu_name'                  => __( 'Jours des réunions', $td ),
+            'all_items'                  => __( 'Tous les jours', $td ),
+            'parent_item'                => __( 'Jour parent:', $td ),
+            'parent_item_colon'          => __( 'Jour parent:', $td ),
+            'new_item_name'              => __( 'Nouveau Jour', $td ),
+            'add_new_item'               => __( 'Ajouter un nouveau Jour', $td ),
+            'edit_item'                  => __( 'Modifier un Jour', $td ),
+            'update_item'                => __( 'Mettre à jour le Jour', $td ),
+            'view_item'                  => __( 'Voir le Jour', $td ),
+            'separate_items_with_commas' => __( 'Séparé les Jours avec une virgule', $td ),
+            'add_or_remove_items'        => __( 'Ajouter ou retirer des Jours', $td ),
+            'choose_from_most_used'      => __( 'Choisir parmi les plus populaires', $td ),
+            'popular_items'              => __( 'Jours populaires', $td ),
+            'search_items'               => __( 'Rechercher de Jours', $td ),
+            'not_found'                  => __( 'Jour introuvable', $td ),
+            'no_terms'                   => __( 'Aucun Jour', $td ),
+            'items_list'                 => __( 'Liste de Jours', $td ),
+            'items_list_navigation'      => __( 'Menu de la liste de Jours', $td ),
         );
         $rewrite = array(
             'slug'                       => 'jours',
@@ -85,13 +87,13 @@ class TxJours implements CustomsDataInterface
 //            'meta_box_cb'       => false
         );
         $terms = array(
-            __("Dimanche", "nacsl"),
-            __("Lundi", "nacsl"),
-            __("Mardi", "nacsl"),
-            __("Mercredi", "nacsl"),
-            __("Jeudi", "nacsl"),
-            __("Vendredi", "nacsl"),
-            __("Samedi", "nacsl"),
+            __("Dimanche", $td ),
+            __("Lundi", $td ),
+            __("Mardi", $td ),
+            __("Mercredi", $td ),
+            __("Jeudi", $td ),
+            __("Vendredi", $td ),
+            __("Samedi", $td ),
         );
 
         return array(

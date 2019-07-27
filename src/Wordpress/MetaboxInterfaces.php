@@ -11,9 +11,7 @@ namespace nacsl\Wordpress;
 
 interface MetaboxInterfaces extends HooksAdminInterfaces
 {
-
     public function init();
-    public function view($post);
     public function save($postID);
 
 }

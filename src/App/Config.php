@@ -12,6 +12,8 @@ namespace nacsl\App;
 class Config
 {
 
+    const TEXTDOMAINE = "nacsl";
+
     private static $_isInit = false;
     private static $_instance = null;
 
@@ -111,7 +113,7 @@ class Config
 
     public function setPrefix(): void
     {
-        $this->_prefix = "nacsl-";
+        $this->_prefix = self::TEXTDOMAINE . "-";
     }
 
 

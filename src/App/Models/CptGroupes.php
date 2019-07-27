@@ -38,35 +38,37 @@ abstract class CptGroupes implements CustomsDataInterface
     {
 
         self::setName();
+        
+        $td = Config::TEXTDOMAINE;
 
         $labels = array(
-            'name'                  => _x( 'Gestionnaire des groupes du CSL de Narcotiques Anonymes', 'Post Type General Name', 'nacsl' ),
-            'singular_name'         => _x( 'Groupe', 'Post Type Singular Name', 'nacsl' ),
-            'menu_name'             => __( 'Groupes', 'nacsl' ),
-            'name_admin_bar'        => __( 'Groupes', 'nacsl' ),
-            'archives'              => __( 'Archives des groupes', 'nacsl' ),
-            'attributes'            => __( 'Attributs du groupe', 'nacsl' ),
-            'parent_item_colon'     => __( 'Groupe parent:', 'nacsl' ),
-            'all_items'             => __( 'Tous les groupes', 'nacsl' ),
-            'add_new_item'          => __( 'Ajouter un groupe', 'nacsl' ),
-            'add_new'               => __( 'Ajouter un groupe', 'nacsl' ),
-            'new_item'              => __( 'Nouveau groupe', 'nacsl' ),
-            'edit_item'             => __( 'Modifier un groupe', 'nacsl' ),
-            'update_item'           => __( 'Mettre à jour le groupe', 'nacsl' ),
-            'view_item'             => __( 'Voir le groupe', 'nacsl' ),
-            'view_items'            => __( 'Voir les groupes', 'nacsl' ),
-            'search_items'          => __( 'Rechercher un groupe', 'nacsl' ),
-            'not_found'             => __( 'Aucun groupe', 'nacsl' ),
-            'not_found_in_trash'    => __( 'Aucun groupe dans la corbeille', 'nacsl' ),
-            'featured_image'        => __( 'Images du groupe', 'nacsl' ),
-            'set_featured_image'    => __( 'Attribuer une image au groupe', 'nacsl' ),
-            'remove_featured_image' => __( 'Retirer l\'image du groupe', 'nacsl' ),
-            'use_featured_image'    => __( 'Utiliser l\'image du groupe', 'nacsl' ),
-            'insert_into_item'      => __( 'Insérer dans un groupe', 'nacsl' ),
-            'uploaded_to_this_item' => __( 'Téléverser au groupe', 'nacsl' ),
-            'items_list'            => __( 'Liste des groupes', 'nacsl' ),
-            'items_list_navigation' => __( 'Liste des groupes', 'nacsl' ),
-            'filter_items_list'     => __( 'Filtrer la liste de groupes', 'nacsl' ),
+            'name'                  => _x( 'Gestionnaire des groupes du CSL de Narcotiques Anonymes', 'Post Type General Name', $td ),
+            'singular_name'         => _x( 'Groupe', 'Post Type Singular Name', $td ),
+            'menu_name'             => __( 'Groupes', $td ),
+            'name_admin_bar'        => __( 'Groupes', $td ),
+            'archives'              => __( 'Archives des groupes', $td ),
+            'attributes'            => __( 'Attributs du groupe', $td ),
+            'parent_item_colon'     => __( 'Groupe parent:', $td ),
+            'all_items'             => __( 'Tous les groupes', $td ),
+            'add_new_item'          => __( 'Ajouter un groupe', $td ),
+            'add_new'               => __( 'Ajouter un groupe', $td ),
+            'new_item'              => __( 'Nouveau groupe', $td ),
+            'edit_item'             => __( 'Modifier un groupe', $td ),
+            'update_item'           => __( 'Mettre à jour le groupe', $td ),
+            'view_item'             => __( 'Voir le groupe', $td ),
+            'view_items'            => __( 'Voir les groupes', $td ),
+            'search_items'          => __( 'Rechercher un groupe', $td ),
+            'not_found'             => __( 'Aucun groupe', $td ),
+            'not_found_in_trash'    => __( 'Aucun groupe dans la corbeille', $td ),
+            'featured_image'        => __( 'Images du groupe', $td ),
+            'set_featured_image'    => __( 'Attribuer une image au groupe', $td ),
+            'remove_featured_image' => __( 'Retirer l\'image du groupe', $td ),
+            'use_featured_image'    => __( 'Utiliser l\'image du groupe', $td ),
+            'insert_into_item'      => __( 'Insérer dans un groupe', $td ),
+            'uploaded_to_this_item' => __( 'Téléverser au groupe', $td ),
+            'items_list'            => __( 'Liste des groupes', $td ),
+            'items_list_navigation' => __( 'Liste des groupes', $td ),
+            'filter_items_list'     => __( 'Filtrer la liste de groupes', $td ),
         );
 
         $rewrite = array(
@@ -77,8 +79,8 @@ abstract class CptGroupes implements CustomsDataInterface
         );
 
         $args = array(
-            'label'                 => __( 'Groupe', 'nacsl' ),
-            'description'           => __( 'Registre des groupes pour réunions de Narcotiques Anonymes.', 'nacsl' ),
+            'label'                 => __( 'Groupe', $td ),
+            'description'           => __( 'Registre des groupes pour réunions de Narcotiques Anonymes.', $td ),
             'labels'                => $labels,
             'supports'              => array( 'title', 'editor', 'thumbnail' ),
             'hierarchical'          => false,
