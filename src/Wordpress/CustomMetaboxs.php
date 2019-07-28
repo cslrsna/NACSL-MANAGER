@@ -10,6 +10,10 @@ namespace nacsl\Wordpress;
 
 use nacsl\App\Views\MetaboxViews;
 
+/**
+ * Class CustomMetaboxs
+ * @package nacsl\Wordpress
+ */
 class CustomMetaboxs implements MetaboxInterfaces
 {
 

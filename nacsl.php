@@ -18,6 +18,7 @@ use nacsl\App\Config;
 use nacsl\App\Models\CptGroupes;
 use nacsl\App\Models\CptServices;
 use nacsl\App\Models\CptSousComites;
+use nacsl\App\Models\MboxGroupesAddress;
 use nacsl\App\Models\MboxGroupesCourriels;
 use nacsl\App\Models\TxFormats;
 use nacsl\App\Models\TxJours;
@@ -28,6 +29,7 @@ use nacsl\Wordpress\CustomPostTypes;
 use nacsl\Wordpress\CustomTaxonomies;
 
 if ( ! defined( 'ABSPATH' ) ) die( 'No direct access :)' );
+
 
 $nacslConfig = Config::getInstance();
 require_once ABSPATH . "wp-admin/includes/plugin.php";
@@ -44,8 +46,8 @@ $nacsl->execute(
         new CustomTaxonomies( array( CptGroupes::getName(), CptSousComites::getName() ), TxJours::data() ),
         new CustomTaxonomies( CptGroupes::getName(), TxVilles::data() ),
 
-        //add_meta_box('id_ma_meta', 'Ma metabox', 'ma_meta_function', 'post', 'side', 'high');
-        new CustomMetaboxs( MboxGroupesCourriels::data() )
+        new CustomMetaboxs( MboxGroupesCourriels::data() ),
+        new CustomMetaboxs( MboxGroupesAddress::data() )
     )
 );
 

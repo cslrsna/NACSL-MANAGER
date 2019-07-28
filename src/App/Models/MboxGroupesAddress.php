@@ -8,8 +8,13 @@
 
 namespace nacsl\App\Models;
 
+use nacsl\App\Config;
 use nacsl\App\Helpers\CustomsDataInterface;
 
+/**
+ * Class MboxGroupesAddress
+ * @package nacsl\App\Models
+ */
 abstract class MboxGroupesAddress implements CustomsDataInterface
 {
     public static function data()
@@ -22,10 +27,22 @@ abstract class MboxGroupesAddress implements CustomsDataInterface
             'priority'  => "high",
             'form'      => array(
                 [
-                    'label' => "Groupe",
-                    'key'   => "_email_groupe",
-                    'type'  => "email",
-                    'name'  => "groupe",
+                    'label' => __("No. civique", Config::TEXTDOMAINE),
+                    'key'   => "_civique",
+                    'type'  => "number",
+                    'name'  => "civique",
+                ],
+                [
+                    'label' => __("Local", Config::TEXTDOMAINE),
+                    'key'   => "_local",
+                    'type'  => "text",
+                    'name'  => "local",
+                ],
+                [
+                    'label' => __("Rue", Config::TEXTDOMAINE),
+                    'key'   => "_rue",
+                    'type'  => "text",
+                    'name'  => "rue",
                 ],
             )
         );

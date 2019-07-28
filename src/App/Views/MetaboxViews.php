@@ -8,11 +8,9 @@
 
 namespace nacsl\App\Views;
 
-
-use nacsl\App\Models\MboxGroupesCourriels;
-
 /**
- * @method getFrom()
+ * Class MetaboxViews
+ * @package nacsl\App\Views
  */
 class MetaboxViews
 {
@@ -30,53 +28,27 @@ class MetaboxViews
 
                 switch ($item['type']){
 
-                    case  'email':
+                    case  'email' || 'text':
                         ?>
                         <tr valign="top">
-                            <th scope="row" style="padding: 10px 10px 10px 0; min-width: 80px; vertical-align: middle;">
+                            <th scope="row">
                                 <label  class="" for="<?= $item['name'] ?>"><?= $item['label'] ?></label>
                             </th>
-                            <td width="100%" style=" padding: 5px 10px;">
+                            <td width="100%">
                                 <input style="height: 28px !important; width: 100%; max-width: 400px;" class="" id="<?= $item['name'] ?>" type="<?= $item['type'] ?>" name="<?= $item['name'] ?>" value="<?= $val ?>" />
                             </td>
                         </tr>
                         <?php
                         break;
 
-                    case 'text':
+                    case  'number':
                         ?>
                         <tr valign="top">
-                            <th scope="row" style="padding: 10px 10px 10px 0; min-width: 80px; vertical-align: middle;">
+                            <th scope="row">
                                 <label  class="" for="<?= $item['name'] ?>"><?= $item['label'] ?></label>
                             </th>
-                            <td width="100%" style=" padding: 5px 10px;">
-                                <input style="height: 28px !important; width: 100%;" class="" id="<?= $item['name'] ?>" type="<?= $item['type'] ?>" name="<?= $item['name'] ?>" value="<?= $val ?>" />
-                            </td>
-                        </tr>
-                        <?php
-                        break;
-
-                    case 'checkbox':
-                        ?>
-                        <tr valign="top">
-                            <th scope="row" style="padding: 10px 10px 10px 0; min-width: 80px; vertical-align: middle;">
-                                <label  class="" for="<?= $item['name'] ?>"><?= $item['label'] ?></label>
-                            </th>
-                            <td width="100%" style=" padding: 5px 10px;">
-                                <input class="" id="<?= $item['name'] ?>" type="<?= $item['type'] ?>" name="<?= $item['name'] ?>" value="<?= $val ?>" />
-                            </td>
-                        </tr>
-                        <?php
-                        break;
-
-                    case 'radio':
-                        ?>
-                        <tr valign="top">
-                            <th scope="row" style="padding: 10px 10px 10px 0; min-width: 80px; vertical-align: middle;">
-                                <label  class="" for="<?= $item['name'] ?>"><?= $item['label'] ?></label>
-                            </th>
-                            <td width="100%" style=" padding: 5px 10px;">
-                                <input class="" id="<?= $item['name'] ?>" type="<?= $item['type'] ?>" name="<?= $item['name'] ?>" value="<?= $val ?>" />
+                            <td width="100%">
+                                <input style="height: 28px !important; width: 100px;" class="" id="<?= $item['name'] ?>" type="<?= $item['type'] ?>" name="<?= $item['name'] ?>" value="<?= $val ?>" />
                             </td>
                         </tr>
                         <?php

@@ -11,8 +11,16 @@ namespace nacsl\App\Models;
 use nacsl\App\Config;
 use nacsl\App\Helpers\CustomsDataInterface;
 
+/**
+ * Class MboxGroupesCourriels
+ * @package nacsl\App\Models
+ */
 abstract class MboxGroupesCourriels implements CustomsDataInterface
 {
+
+    /**
+     * @return array
+     */
     public static function data()
     {
         return array(
@@ -20,7 +28,7 @@ abstract class MboxGroupesCourriels implements CustomsDataInterface
             'title'     => __("Courriels du groupe", Config::TEXTDOMAINE),
             'screen'    => CptGroupes::getName(),
             'context'   => "normal",
-            'priority'  => "high",
+            'priority'  => "default",
             'form'      => array(
                 [
                     'label' => __("Groupes", Config::TEXTDOMAINE),
