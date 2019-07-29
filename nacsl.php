@@ -29,10 +29,8 @@ if ( ! defined( 'ABSPATH' ) ) die( 'No direct access' );
 
 $nacslConfig = Config::getInstance();
 
-if ( ! function_exists( 'get_plugin_data' ) ){
-    require_once ABSPATH . "wp-admin/includes/plugin.php";
-    $nacslConfig->init( __FILE__ );
-}
+require_once ABSPATH . "wp-admin/includes/plugin.php";
+$nacslConfig->init( __FILE__ );
 
 $nacsl = Main::getInstance();
 $nacsl->execute(
