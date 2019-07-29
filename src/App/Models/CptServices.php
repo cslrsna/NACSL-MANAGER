@@ -81,6 +81,7 @@ abstract class CptServices implements CustomsDataInterface
             'description'           => __( 'Registre des postes de services pour réunions de Narcotiques Anonymes.', 'nacsl' ),
             'labels'                => $labels,
             'supports'              => array( 'title', 'editor' ),
+            'taxonomies'            => array( 'category' ),
             'hierarchical'          => false,
             'public'                => true,
             'show_ui'               => true,
