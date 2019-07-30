@@ -4,7 +4,7 @@
 Plugin Name: NACSL Manager
 Plugin URI: http://github.com/cslrsna
 Description: A brief description of the Plugin.
-Version: 1.0
+Version: 1.0.1
 Author: webmestre
 Author URI: http://cslrsna.org
 Text Domain: nacsl
@@ -42,6 +42,8 @@ $nacsl->execute(
         new CustomTaxonomies( CptGroupes::getName(), TxFormats::data() ),
         new CustomTaxonomies( array( CptGroupes::getName(), CptSousComites::getName() ), TxJours::data() ),
         new CustomTaxonomies( CptGroupes::getName(), TxVilles::data() ),
+
+        //TODO: metabox hooks
     )
 );
 
