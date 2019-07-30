@@ -8,6 +8,8 @@
 
 namespace nacsl\Wordpress;
 
+use nacsl\App\Models\TxFormats;
+
 /**
  * Class CustomPostTypes
  * @package nacsl\Wordpress
@@ -90,7 +92,7 @@ class CustomPostTypes implements HooksInterfaces
 
     public function showTaxonomies($the_content)
     {
-        return $the_content .= get_the_tag_list(null, " | ", null, 1);
+        return $the_content .= get_the_taxonomies(the_ID(), array( TxFormats::getName() ));
     }
 
     public function register()
