@@ -141,6 +141,7 @@ class CustomTaxonomies implements HooksInterfaces
     public function hook()
     {
         add_action( 'init', array( $this, 'register' ), 0 );
+        get_the_term_list( $this->getCpt(), $this->getName(), " ", " | ", " " );
     }
 
 }
