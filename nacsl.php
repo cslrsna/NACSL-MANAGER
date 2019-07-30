@@ -15,6 +15,7 @@ License: GPL3
 require "vendor/autoload.php";
 
 use nacsl\App\Config;
+use nacsl\App\Models\CptActivites;
 use nacsl\App\Models\CptGroupes;
 use nacsl\App\Models\CptServices;
 use nacsl\App\Models\CptSousComites;
@@ -38,6 +39,7 @@ $nacsl->execute(
         new CustomPostTypes( CptGroupes::data() ),
         new CustomPostTypes( CptSousComites::data() ),
         new CustomPostTypes( CptServices::data() ),
+        new CustomPostTypes( CptActivites::data() ),
 
         new CustomTaxonomies( CptGroupes::getName(), TxFormats::data() ),
         new CustomTaxonomies( array( CptGroupes::getName(), CptSousComites::getName() ), TxJours::data() ),
