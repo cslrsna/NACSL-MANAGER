@@ -44,7 +44,7 @@ abstract class CptGroupes implements CustomsDataInterface
             'singular_name'         => _x( 'Réunion', 'Post Type Singular Name', 'nacsl' ),
             'menu_name'             => __( 'Réunions', 'nacsl' ),
             'name_admin_bar'        => __( 'Réunions', 'nacsl' ),
-            'archives'              => __( 'Archives des réunions', 'nacsl' ),
+            'archives'              => __( 'Réunions NA', 'nacsl' ),
             'attributes'            => __( 'Attributs de la réunion', 'nacsl' ),
             'parent_item_colon'     => __( 'Réunion parente:', 'nacsl' ),
             'all_items'             => __( 'Tous les réunions', 'nacsl' ),
