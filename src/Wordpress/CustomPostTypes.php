@@ -88,6 +88,11 @@ class CustomPostTypes implements HooksInterfaces
 
     /***********************************************************************  METHODS  */
 
+    public function showTaxonomies()
+    {
+        get_the_tag_list(null, " | ", null, 1);
+    }
+
     public function register()
     {
         register_post_type( $this->getName(), $this->getArgs() );
@@ -96,5 +101,6 @@ class CustomPostTypes implements HooksInterfaces
     public function hook()
     {
         add_action( 'init', array( $this,'register' ), 0 );
+        add_filter( 'the_content', array($this, 'showTaxonomies') );
     }
 }

@@ -128,10 +128,6 @@ class CustomTaxonomies implements HooksInterfaces
 
     /***********************************************************************  METHODS  */
 
-    public function showInPost()
-    {
-        get_the_term_list( $this->getCpt(), $this->getName(), " ", " | ", " " );
-    }
 
     public function register()
     {
