@@ -146,7 +146,6 @@ class CustomTaxonomies implements HooksInterfaces
     public function hook()
     {
         add_action( 'init', array( $this, 'register' ), 0 );
-        add_filter( 'the_posts', array($this, 'showInPost') );
     }
 
 }
