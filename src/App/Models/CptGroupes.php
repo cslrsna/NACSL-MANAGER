@@ -80,7 +80,7 @@ abstract class CptGroupes implements CustomsDataInterface
             'label'                 => __( 'Groupe', 'nacsl' ),
             'description'           => __( 'Registre des groupes pour réunions de Narcotiques Anonymes.', 'nacsl' ),
             'labels'                => $labels,
-            'supports'              => array( 'title', 'editor', 'thumbnail' ),
+            'supports'              => array( 'title', 'editor', 'thumbnail', 'category' ),
             'hierarchical'          => false,
             'public'                => true,
             'show_ui'               => true,
