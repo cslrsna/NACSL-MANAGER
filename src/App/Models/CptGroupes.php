@@ -40,7 +40,7 @@ abstract class CptGroupes implements CustomsDataInterface
         self::setName();
 
         $labels = array(
-            'name'                  => _x( 'Réunions de Narcotiques Anonymes', 'Post Type General Name', 'nacsl' ),
+            'name'                  => _x( 'Gestionnaires des réunions de Narcotiques Anonymes', 'Post Type General Name', 'nacsl' ),
             'singular_name'         => _x( 'Réunion', 'Post Type Singular Name', 'nacsl' ),
             'menu_name'             => __( 'Réunions', 'nacsl' ),
             'name_admin_bar'        => __( 'Réunions', 'nacsl' ),
