@@ -92,7 +92,7 @@ class CustomPostTypes implements HooksInterfaces
 
     public function showTaxonomies($the_content)
     {
-        get_the_term_list(the_ID(), TxFormats::getName(), null, " | ", null);
+//        get_the_term_list(the_ID(), TxFormats::getName(), null, " | ", null);
     }
 
     public function register()
@@ -103,6 +103,6 @@ class CustomPostTypes implements HooksInterfaces
     public function hook()
     {
         add_action( 'init', array( $this,'register' ), 0 );
-        add_filter( 'the_content', array($this, 'showTaxonomies') ); //TODO: show taxonomies in post type
+//        add_filter( 'the_content', array($this, 'showTaxonomies') ); //TODO: show taxonomies in post type
     }
 }
