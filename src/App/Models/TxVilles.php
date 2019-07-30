@@ -43,27 +43,29 @@ abstract class TxVilles implements CustomsDataInterface
     {
         self::setName();
 
+        $td = Config::TEXTDOMAINE;
+
         $labels = array(
-            'name'                       => _x( 'Villes', 'Taxonomy General Name', 'nacsl' ),
-            'singular_name'              => _x( 'Ville', 'Taxonomy Singular Name', 'nacsl' ),
-            'menu_name'                  => __( 'Villes', 'nacsl' ),
-            'all_items'                  => __( 'Tous les villes', 'nacsl' ),
-            'parent_item'                => __( 'Ville parent:', 'nacsl' ),
-            'parent_item_colon'          => __( 'Ville parent:', 'nacsl' ),
-            'new_item_name'              => __( 'Nouvelle ville', 'nacsl' ),
-            'add_new_item'               => __( 'Ajouter un nouvelle ville', 'nacsl' ),
-            'edit_item'                  => __( 'Modifier une ville', 'nacsl' ),
-            'update_item'                => __( 'Mettre à jour la ville', 'nacsl' ),
-            'view_item'                  => __( 'Voir la ville', 'nacsl' ),
-            'separate_items_with_commas' => __( 'Séparé les villes avec une virgule', 'nacsl' ),
-            'add_or_remove_items'        => __( 'Ajouter ou retirer des villes', 'nacsl' ),
-            'choose_from_most_used'      => __( 'Choisir parmi les plus populaires', 'nacsl' ),
-            'popular_items'              => __( 'Villes populaires', 'nacsl' ),
-            'search_items'               => __( 'Rechercher de villes', 'nacsl' ),
-            'not_found'                  => __( 'Aucune ville', 'nacsl' ),
-            'no_terms'                   => __( 'Aucune ville', 'nacsl' ),
-            'items_list'                 => __( 'Liste de villes', 'nacsl' ),
-            'items_list_navigation'      => __( 'Menu de la liste de villes', 'nacsl' ),
+            'name'                       => _x( 'Villes', 'Taxonomy General Name', $td ),
+            'singular_name'              => _x( 'Ville', 'Taxonomy Singular Name', $td ),
+            'menu_name'                  => __( 'Villes', $td ),
+            'all_items'                  => __( 'Tous les villes', $td ),
+            'parent_item'                => __( 'Ville parent:', $td ),
+            'parent_item_colon'          => __( 'Ville parent:', $td ),
+            'new_item_name'              => __( 'Nouvelle ville', $td ),
+            'add_new_item'               => __( 'Ajouter un nouvelle ville', $td ),
+            'edit_item'                  => __( 'Modifier une ville', $td ),
+            'update_item'                => __( 'Mettre à jour la ville', $td ),
+            'view_item'                  => __( 'Voir la ville', $td ),
+            'separate_items_with_commas' => __( 'Séparé les villes avec une virgule', $td ),
+            'add_or_remove_items'        => __( 'Ajouter ou retirer des villes', $td ),
+            'choose_from_most_used'      => __( 'Choisir parmi les plus populaires', $td ),
+            'popular_items'              => __( 'Villes populaires', $td ),
+            'search_items'               => __( 'Rechercher de villes', $td ),
+            'not_found'                  => __( 'Aucune ville', $td ),
+            'no_terms'                   => __( 'Aucune ville', $td ),
+            'items_list'                 => __( 'Liste de villes', $td ),
+            'items_list_navigation'      => __( 'Menu de la liste de villes', $td ),
         );
         $rewrite = array(
             'slug'                       => 'villes',
@@ -84,14 +86,14 @@ abstract class TxVilles implements CustomsDataInterface
             'show_in_rest'              => true,
         );
         $terms = array(
-            __("Longueuil", "nacsl"),
-            __("St-Hubert", "nacsl"),
-            __("Greenfield Park", "nacsl"),
-            __("Lemoyne", "nacsl"),
-            __("Ste-Hyacinthe", "nacsl"),
-            __("Delson", "nacsl"),
-            __("Ste-Julie", "nacsl"),
-            __("Boucherville", "nacsl"),
+            __("Longueuil", $td ),
+            __("St-Hubert", $td ),
+            __("Greenfield Park", $td ),
+            __("Lemoyne", $td ),
+            __("Ste-Hyacinthe", $td ),
+            __("Delson", $td ),
+            __("Ste-Julie", $td ),
+            __("Boucherville", $td ),
         );
 
         return array(
