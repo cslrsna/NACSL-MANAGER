@@ -88,7 +88,7 @@ abstract class CptServices implements CustomsDataInterface
             'public'                => true,
             'show_ui'               => true,
             'show_in_menu'          => true,
-            'menu_position'         => -1,
+            'menu_position'         => -9,
             'menu_icon'             => Config::getInstance()->getUrls('img') . 'logo-na.png',
             'show_in_admin_bar'     => true,
             'show_in_nav_menus'     => true,
