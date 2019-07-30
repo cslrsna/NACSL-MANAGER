@@ -10,6 +10,7 @@ namespace nacsl\App\Models;
 
 use nacsl\App\Config;
 use nacsl\App\Helpers\CustomsDataInterface;
+use nacsl\App\Views\MetaboxViews;
 
 /**
  * Class MboxGroupesAddress
@@ -44,7 +45,8 @@ abstract class MboxGroupesAddress implements CustomsDataInterface
                     'type'  => "text",
                     'name'  => "rue",
                 ],
-            )
+            ),
+            'view' => MetaboxViews::class
         );
 
     }

@@ -8,13 +8,19 @@
 
 namespace nacsl\App\Views;
 
+use nacsl\Wordpress\MetaboxViewsInterfaces;
+
 /**
  * Class MetaboxViews
  * @package nacsl\App\Views
  */
-class MetaboxViews
+class MetaboxViews implements MetaboxViewsInterfaces
 {
 
+    /**
+     * @param $post
+     * @param $mbox
+     */
     public static function render($post, $mbox)
     {
 

@@ -23,6 +23,7 @@ class CustomMetaboxs implements MetaboxInterfaces
     private $_context = "";
     private $_priority = "";
     private $_from = array();
+    private $_view;
 
     /*******************************************************************   GETTER   */
 
@@ -72,6 +73,14 @@ class CustomMetaboxs implements MetaboxInterfaces
     public function getFrom(): array
     {
         return $this->_from;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getView()
+    {
+        return $this->_view;
     }
 
     /*******************************************************************   SETTER   */
@@ -124,13 +133,20 @@ class CustomMetaboxs implements MetaboxInterfaces
         $this->_from = $from;
     }
 
+    /**
+     * @param $view
+     */
+    public function setView( $view ): void
+    {
+        $this->_view = $view;
+    }
+
     /*******************************************************************   METHODS   */
 
     /**
      * CustomMetaboxs constructor.
      * @param array $datas
      */
-//    public function __construct( string $id, string $title, $screen, string $context, string $priority, array $form)
     public function __construct( array $datas )
     {
         $this->setId        ( $datas['id'] );
@@ -139,11 +155,20 @@ class CustomMetaboxs implements MetaboxInterfaces
         $this->setContext   ( $datas['context'] );
         $this->setPriority  ( $datas['priority'] );
         $this->setFrom      ( $datas['form'] );
+        $this->setView      ( $datas['view'] );
     }
 
     public function init()
     {
-        add_meta_box($this->getId(), $this->getTitle(), array(MetaboxViews::class, 'render'), $this->getScreen(), $this->getContext(), $this->getPriority(), $this->getFrom());
+        add_meta_box(
+            $this->getId(),
+            $this->getTitle(),
+            array($this->getView(), 'render'),
+            $this->getScreen(),
+            $this->getContext(),
+            $this->getPriority(),
+            $this->getFrom()
+        );
     }
 
     public function save($postID)

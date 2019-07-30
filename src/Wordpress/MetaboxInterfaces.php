@@ -9,9 +9,13 @@
 namespace nacsl\Wordpress;
 
 
-interface MetaboxInterfaces extends HooksAdminInterfaces
+interface MetaboxInterfaces extends HooksInterfaces
 {
     public function init();
     public function save($postID);
+}
 
+interface MetaboxViewsInterfaces
+{
+    public static function render($post, $mbox);
 }

@@ -83,6 +83,7 @@ abstract class CptSousComites implements CustomsDataInterface
             'description'           => __( 'Registre des sous-comités CSL de Narcotiques Anonymes.', $td ),
             'labels'                => $labels,
             'supports'              => array( 'title', 'editor', 'thumbnail' ),
+            'taxonomies'            => array( 'category' ),
             'hierarchical'          => false,
             'public'                => true,
             'show_ui'               => true,

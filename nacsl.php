@@ -31,8 +31,8 @@ use nacsl\Wordpress\CustomTaxonomies;
 if ( ! defined( 'ABSPATH' ) ) die( 'No direct access :)' );
 
 
-$nacslConfig = Config::getInstance();
 require_once ABSPATH . "wp-admin/includes/plugin.php";
+$nacslConfig = Config::getInstance();
 $nacslConfig->init( __FILE__ );
 
 $nacsl = Main::getInstance();

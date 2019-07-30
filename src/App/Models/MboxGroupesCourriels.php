@@ -10,6 +10,8 @@ namespace nacsl\App\Models;
 
 use nacsl\App\Config;
 use nacsl\App\Helpers\CustomsDataInterface;
+use nacsl\App\Views\MetaboxViewCourriels;
+use nacsl\App\Views\MetaboxViews;
 
 /**
  * Class MboxGroupesCourriels
@@ -48,7 +50,8 @@ abstract class MboxGroupesCourriels implements CustomsDataInterface
                     'type'  => "email",
                     'name'  => "rsg_adj",
                 ],
-            )
+            ),
+            'view' => MetaboxViewCourriels::class
         );
 
     }
