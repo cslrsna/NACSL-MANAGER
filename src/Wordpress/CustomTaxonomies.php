@@ -128,6 +128,11 @@ class CustomTaxonomies implements HooksInterfaces
 
     /***********************************************************************  METHODS  */
 
+    public function showInPost()
+    {
+        get_the_term_list( $this->getCpt(), $this->getName(), " ", " | ", " " );
+    }
+
     public function register()
     {
         register_taxonomy( $this->getName(), $this->getCpt(), $this->getArgs() );
@@ -141,7 +146,7 @@ class CustomTaxonomies implements HooksInterfaces
     public function hook()
     {
         add_action( 'init', array( $this, 'register' ), 0 );
-        get_the_term_list( $this->getCpt(), $this->getName(), " ", " | ", " " );
+        add_filter( 'the_posts', array($this, 'showInPost') );
     }
 
 }
