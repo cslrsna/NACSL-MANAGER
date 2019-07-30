@@ -46,8 +46,8 @@ $nacsl->execute(
         new CustomTaxonomies( array( CptGroupes::getName(), CptSousComites::getName() ), TxJours::data() ),
         new CustomTaxonomies( CptGroupes::getName(), TxVilles::data() ),
 
-        new CustomMetaboxs( MboxGroupesCourriels::data() ),
-        new CustomMetaboxs( MboxGroupesAddress::data() )
+//        new CustomMetaboxs( MboxGroupesCourriels::data() ),
+//        new CustomMetaboxs( MboxGroupesAddress::data() )
     )
 );
 
