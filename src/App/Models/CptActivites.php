@@ -77,7 +77,7 @@ abstract class CptActivites implements CustomsDataInterface
         );
 
         $args = array(
-            'label'                 => __( 'Groupe', 'nacsl' ),
+            'label'                 => __( 'Activites', 'nacsl' ),
             'description'           => __( 'Registre des activités du CSL de Narcotiques Anonymes.', 'nacsl' ),
             'labels'                => $labels,
             'supports'              => array( 'title', 'editor', 'thumbnail'),
