@@ -88,9 +88,9 @@ class CustomPostTypes implements HooksInterfaces
 
     /***********************************************************************  METHODS  */
 
-    public function showTaxonomies()
+    public function showTaxonomies($the_content)
     {
-        get_the_tag_list(null, " | ", null, 1);
+        return $the_content .= get_the_tag_list(null, " | ", null, 1);
     }
 
     public function register()
