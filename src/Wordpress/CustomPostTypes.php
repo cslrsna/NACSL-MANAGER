@@ -92,7 +92,7 @@ class CustomPostTypes implements HooksInterfaces
 
     public function showTaxonomies($the_content)
     {
-        return $the_content .= get_the_term_list(the_ID(), TxFormats::getName(), null, " | ", null);
+        get_the_term_list(the_ID(), TxFormats::getName(), null, " | ", null);
     }
 
     public function register()
