@@ -15,6 +15,7 @@ License: GPL3
 require "vendor/autoload.php";
 
 use nacsl\App\Config;
+use nacsl\App\Helpers\AddScript;
 use nacsl\App\Models\CptActivites;
 use nacsl\App\Models\CptGroupes;
 use nacsl\App\Models\CptServices;
@@ -45,6 +46,8 @@ $nacsl->execute(
         new CustomTaxonomies( CptGroupes::getName(), TxFormats::data() ),
         new CustomTaxonomies( array( CptGroupes::getName(), CptSousComites::getName() ), TxJours::data() ),
         new CustomTaxonomies( CptGroupes::getName(), TxVilles::data() ),
+
+        new AddScript()
 
         //TODO: metabox hooks
     )
