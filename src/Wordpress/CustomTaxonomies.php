@@ -128,6 +128,10 @@ class CustomTaxonomies implements HooksInterfaces
 
     /***********************************************************************  METHODS  */
 
+    public function showTag($atts)
+    {
+        echo get_the_term_list( get_the_ID(), $this->getName(), " ", " | ", " " );
+    }
 
     public function register()
     {
@@ -142,6 +146,7 @@ class CustomTaxonomies implements HooksInterfaces
     public function hook()
     {
         add_action( 'init', array( $this, 'register' ), 0 );
+        add_shortcode( $this->getName(), array($this,'showTag') );
     }
 
 }

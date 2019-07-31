@@ -90,10 +90,10 @@ class CustomPostTypes implements HooksInterfaces
 
     /***********************************************************************  METHODS  */
 
-    public function showTag($atts)
-    {
-        echo get_the_tag_list("", " | ", "");
-    }
+//    public function showTag($atts)
+//    {
+//        echo get_the_term_list( get_the_ID(), $this->getName(), " ", " | ", " " );
+//    }
 
     public function register()
     {
@@ -103,6 +103,6 @@ class CustomPostTypes implements HooksInterfaces
     public function hook()
     {
         add_action( 'init', array( $this,'register' ), 0 );
-        add_shortcode( 'cpt_tags', array($this, 'showTag') );
+//        add_shortcode( 'cpt_tags', array($this, 'showTag') );
     }
 }
