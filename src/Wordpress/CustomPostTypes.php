@@ -90,9 +90,9 @@ class CustomPostTypes implements HooksInterfaces
 
     /***********************************************************************  METHODS  */
 
-    public function showTag()
+    public function showTag($atts)
     {
-        get_the_tag_list( null, " | ", null );
+        get_the_tag_list( null, " | ", null, get_posts($atts) );
     }
 
     public function register()
