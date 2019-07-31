@@ -78,7 +78,7 @@ abstract class CptGroupes implements CustomsDataInterface
 
         $args = array(
             'label'                 => __( 'Groupe', 'nacsl' ),
-            'description'           => __( 'Registre des groupes pour réunions de Narcotiques Anonymes.', 'nacsl' ),
+            'description'           => __( 'Les réunions de Narcotiques Anonymes sont ouvertes à toutes personnes au prise avec un problème de dépendance lié aux drogues prescrites ou non, mais prises de façon abusive, l\'alcool est consiérée comme une drogue.', 'nacsl' ),
             'labels'                => $labels,
             'supports'              => array( 'title', 'editor', 'thumbnail'),
             'taxonomies'            => array('category'),
