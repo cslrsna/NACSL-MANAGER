@@ -98,13 +98,13 @@ abstract class TxFormats implements CustomsDataInterface
             __("Dépendants seulement", $td ),
             __("Enfants bienvenus", $td ),
             __("Fauteuil roulant", $td ),
-            __("Femmes", $td ),
+            __("Femmes seulement", $td ),
             __("Fermeture temporaire", $td ),
             __("Fermé jours feries.", $td ),
             __("Formats variés", $td ),
             __("LGBT", $td ),
             __("Guide des Étapes", $td ),
-            __("Hommes", $td ),
+            __("Hommes seulement", $td ),
             __("Juste pour aujourd'hui", $td ),
             __("Méditation", $td ),
             __("Partage", $td ),
@@ -118,8 +118,8 @@ abstract class TxFormats implements CustomsDataInterface
             __("Ça marche, Comment et Pourquoi", $td ),
             __("Étapes NA", $td ),
             __("Études de littératures NA", $td ),
-            __("Fermé", $td ),
-            __("Ouvert", $td )
+            __("Fermé; membres seulement", $td ),
+            __("Ouvert au public", $td )
         );
 
         return array(
