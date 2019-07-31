@@ -36,7 +36,6 @@ $nacslConfig->init( __FILE__ );
 $nacsl = Main::getInstance();
 $nacsl->execute(
     array(
-//        new BugsPatcher(),
 
         new CustomPostTypes( CptGroupes::data() ),
         new CustomPostTypes( CptSousComites::data() ),
