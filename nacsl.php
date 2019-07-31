@@ -23,9 +23,9 @@ use nacsl\App\Models\TxFormats;
 use nacsl\App\Models\TxJours;
 use nacsl\App\Models\TxVilles;
 use nacsl\Main;
-use nacsl\Wordpress\BugsPatcher;
 use nacsl\Wordpress\CustomPostTypes;
 use nacsl\Wordpress\CustomTaxonomies;
+use Walker_Nav_Menu_With_Aria;
 
 if ( ! defined( 'ABSPATH' ) ) die( 'No direct access' );
 
@@ -37,7 +37,7 @@ $nacslConfig->init( __FILE__ );
 $nacsl = Main::getInstance();
 $nacsl->execute(
     array(
-        new BugsPatcher(),
+//        new BugsPatcher(),
 
         new CustomPostTypes( CptGroupes::data() ),
         new CustomPostTypes( CptSousComites::data() ),
@@ -52,3 +52,9 @@ $nacsl->execute(
     )
 );
 
+if (has_nav_menu('primary')) {
+    wp_nav_menu( array(
+        'theme_location' => 'primary',
+        'walker'         => new Walker_Nav_Menu_With_Aria,
+    ) );
+}
