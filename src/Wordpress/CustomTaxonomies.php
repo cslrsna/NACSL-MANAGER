@@ -130,7 +130,9 @@ class CustomTaxonomies implements HooksInterfaces
 
     public function showTag($atts, $content)
     {
-        echo $content . get_the_term_list( get_the_ID(), $this->getName(), " ", " | ", " " );
+        if ( get_terms($this->getName()) ){
+            echo $content . get_the_term_list( get_the_ID(), $this->getName(), " ", " | ", " " );
+        }
     }
 
     public function register()
