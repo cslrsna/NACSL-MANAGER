@@ -90,9 +90,9 @@ class CustomPostTypes implements HooksInterfaces
 
     /***********************************************************************  METHODS  */
 
-    public function showTaxonomies($the_content)
+    public function showTag()
     {
-//        get_the_term_list(the_ID(), TxFormats::getName(), null, " | ", null);
+        get_the_tag_list( null, " | ", null );
     }
 
     public function register()
@@ -103,6 +103,6 @@ class CustomPostTypes implements HooksInterfaces
     public function hook()
     {
         add_action( 'init', array( $this,'register' ), 0 );
-//        add_filter( 'the_content', array($this, 'showTaxonomies') ); //TODO: show taxonomies in post type
+        add_shortcode( 'cpt_tags', array($this, 'showTag') );
     }
 }
