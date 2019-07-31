@@ -82,7 +82,7 @@ abstract class CptServices implements CustomsDataInterface
             'label'                 => __( 'Poste de service', $td ),
             'description'           => __( 'Registre des postes de services pour réunions de Narcotiques Anonymes.', $td ),
             'labels'                => $labels,
-            'supports'              => array( 'title', 'editor', 'post-formats' ),
+            'supports'              => array( 'title', 'editor'),
             'taxonomies'            => array( 'category' ),
             'hierarchical'          => false,
             'public'                => true,
