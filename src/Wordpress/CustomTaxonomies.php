@@ -147,7 +147,7 @@ class CustomTaxonomies implements HooksInterfaces
 
     public function hook()
     {
-        add_action( 'init', array( $this, 'register' ), 10 );
+        add_action( 'init', array( $this, 'register' ), 0 );
         add_shortcode( $this->getName(), array($this,'showTag') );
     }
 
