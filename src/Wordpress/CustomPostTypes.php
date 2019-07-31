@@ -92,7 +92,7 @@ class CustomPostTypes implements HooksInterfaces
 
     public function showTag($atts)
     {
-        echo "je fais un test";
+        echo get_the_tag_list("", " | ", "");
     }
 
     public function register()
