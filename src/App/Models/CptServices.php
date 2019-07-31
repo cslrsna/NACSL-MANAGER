@@ -72,7 +72,7 @@ abstract class CptServices implements CustomsDataInterface
         );
 
         $rewrite = array(
-            'slug'                  => 'services',
+            'slug'                  => 'serviteurs',
             'with_front'            => true,
             'pages'                 => true,
             'feeds'                 => true,
