@@ -26,7 +26,6 @@ use nacsl\Main;
 use nacsl\Wordpress\CustomPostTypes;
 use nacsl\Wordpress\CustomTaxonomies;
 
-
 if ( ! defined( 'ABSPATH' ) ) die( 'No direct access' );
 
 $nacslConfig = Config::getInstance();
