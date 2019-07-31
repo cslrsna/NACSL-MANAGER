@@ -25,7 +25,7 @@ use nacsl\App\Models\TxVilles;
 use nacsl\Main;
 use nacsl\Wordpress\CustomPostTypes;
 use nacsl\Wordpress\CustomTaxonomies;
-use Walker_Nav_Menu_With_Aria;
+
 
 if ( ! defined( 'ABSPATH' ) ) die( 'No direct access' );
 
@@ -51,10 +51,3 @@ $nacsl->execute(
         //TODO: metabox hooks
     )
 );
-
-if (has_nav_menu('primary')) {
-    wp_nav_menu( array(
-        'theme_location' => 'primary',
-        'walker'         => new Walker_Nav_Menu_With_Aria,
-    ) );
-}
