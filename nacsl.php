@@ -23,6 +23,7 @@ use nacsl\App\Models\TxFormats;
 use nacsl\App\Models\TxJours;
 use nacsl\App\Models\TxVilles;
 use nacsl\Main;
+use nacsl\Wordpress\BugsPatcher;
 use nacsl\Wordpress\CustomPostTypes;
 use nacsl\Wordpress\CustomTaxonomies;
 
@@ -36,6 +37,8 @@ $nacslConfig->init( __FILE__ );
 $nacsl = Main::getInstance();
 $nacsl->execute(
     array(
+        new BugsPatcher(),
+
         new CustomPostTypes( CptGroupes::data() ),
         new CustomPostTypes( CptSousComites::data() ),
         new CustomPostTypes( CptServices::data() ),
