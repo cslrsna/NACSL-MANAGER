@@ -42,7 +42,7 @@ abstract class CptSousComites implements CustomsDataInterface
         $td = Config::TEXTDOMAINE;
 
         $labels = array(
-            'name'                  => _x( 'Gestionnaire des sous-comités du CSL de Narcotiques Anonymes', 'Post Type General Name', $td ),
+            'name'                  => _x( 'Liste des sous-comités du CSL de Narcotiques Anonymes', 'Post Type General Name', $td ),
             'singular_name'         => _x( 'sous-comité', 'Post Type Singular Name', $td ),
             'menu_name'             => __( 'Sous-comités', $td ),
             'name_admin_bar'        => __( 'Sous-comités', $td ),
