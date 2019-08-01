@@ -8,10 +8,9 @@
 
 namespace nacsl\App\Helpers;
 
+use nacsl\Wordpress\HooksInterfaces;
 
-use nacsl\Wordpress\HooksFrontInterfaces;
-
-class AddScript implements HooksFrontInterfaces
+class AddScript implements HooksInterfaces
 {
 
     public function script()
