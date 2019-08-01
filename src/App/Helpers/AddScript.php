@@ -19,8 +19,8 @@ class AddScript implements HooksFrontInterfaces
         ?>
         <script>
             jQuery("td:contains('Poste vacant')").css({
-                'font-weight':'700',
-                'color': '#ff1e1e'
+                "font-weight":700,
+                "color": "#ff1e1e",
             });
         </script>
         <?php
