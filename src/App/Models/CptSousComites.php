@@ -80,7 +80,7 @@ abstract class CptSousComites implements CustomsDataInterface
 
         $args = array(
             'label'                 => __( 'sous-comité', $td ),
-            'description'           => __( 'Registre des sous-comités CSL de Narcotiques Anonymes.', $td ),
+            'description'           => __( 'Liste des sous-comités du CSLRS de Narcotiques Anonymes.', $td ),
             'labels'                => $labels,
             'supports'              => array( 'title', 'editor', 'thumbnail' ),
             'taxonomies'            => array( 'category' ),
