@@ -25,6 +25,6 @@ class AddScript implements HooksFrontInterfaces
 
     public function hook()
     {
-        add_filter('update_footer', array($this, 'script'));
+        add_action('wp_footer', array($this, 'script'));
     }
 }
