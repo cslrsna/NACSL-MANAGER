@@ -23,6 +23,8 @@ class AddScript implements HooksFrontInterfaces
                 "color": "#ff1e1e",
             });
             jQuery('a[href*="drive.google"]').attr("target", "_blank");
+
+            console.log("<?= get_permalink() ?>");
         </script>
         <?php
     }
