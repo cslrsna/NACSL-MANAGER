@@ -72,7 +72,7 @@ abstract class CptSousComites implements CustomsDataInterface
         );
 
         $rewrite = array(
-            'slug'                  => 'sous-comités',
+            'slug'                  => 'sous-comites',
             'with_front'            => true,
             'pages'                 => true,
             'feeds'                 => true,
