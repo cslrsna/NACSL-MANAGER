@@ -27,7 +27,7 @@ class PagesCorrections implements HooksFrontInterfaces
         if ( $_SERVER['REQUEST_URI'] == "/reunions/") {
             wp_enqueue_style(
                 Config::TEXTDOMAINE . "-css-correction",
-                $this->_config->getPaths('css') . "corrections.css"
+                $this->_config->getUrls('css') . "corrections.css"
             );
         }
     }
