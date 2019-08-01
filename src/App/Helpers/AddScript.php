@@ -22,6 +22,7 @@ class AddScript implements HooksFrontInterfaces
                 "font-weight":700,
                 "color": "#ff1e1e",
             });
+            jQuery('a[href*="drive.google"]').attr("target", "_blank");
         </script>
         <?php
     }
