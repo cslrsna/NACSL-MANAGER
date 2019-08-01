@@ -35,5 +35,6 @@ class PagesCorrections implements HooksFrontInterfaces
     public function hook()
     {
         add_action('wp_enqueue_scripts', array($this, 'addCss'));
+//        add_filter('stylesheet', );
     }
 }
