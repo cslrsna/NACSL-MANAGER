@@ -154,12 +154,14 @@ class Config
             $this->setPaths( "main",    $this->getPaths('root') . "src/" );
             $this->setPaths( "app",     $this->getPaths('main') . "App/" );
             $this->setPaths( "img",     $this->getPaths('main') . "Images/" );
+            $this->setPaths( "css",     $this->getPaths('main') . "Stylesheets/" );
             $this->setPaths( "wp",      $this->getPaths('main') . "Wordpress/" );
 
             $this->setUrls( "root",     plugin_dir_url( $root) );
             $this->setUrls( "main",     $this->getUrls( 'root') . "src/" );
             $this->setUrls( "app",      $this->getUrls( 'main') . "App/" );
             $this->setUrls( "img",      $this->getUrls( 'main') . "Images/" );
+            $this->setUrls( "css",      $this->getUrls( 'main') . "Stylesheets/" );
             $this->setUrls( "wp",       $this->getUrls( 'main') . "Wordpress/" );
 
             self::$_isInit = true;

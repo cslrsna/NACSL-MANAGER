@@ -16,6 +16,7 @@ require "vendor/autoload.php";
 
 use nacsl\App\Config;
 use nacsl\App\Helpers\AddScript;
+use nacsl\App\Helpers\PagesCorrections;
 use nacsl\App\Models\CptActivites;
 use nacsl\App\Models\CptGroupes;
 use nacsl\App\Models\CptServices;
@@ -47,7 +48,8 @@ $nacsl->execute(
         new CustomTaxonomies( array( CptGroupes::getName(), CptSousComites::getName() ), TxJours::data() ),
         new CustomTaxonomies( CptGroupes::getName(), TxVilles::data() ),
 
-        new AddScript()
+        new AddScript(),
+        new PagesCorrections(),
 
         //TODO: metabox hooks
     )
