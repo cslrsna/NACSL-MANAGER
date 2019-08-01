@@ -46,7 +46,7 @@ abstract class CptSousComites implements CustomsDataInterface
             'singular_name'         => _x( 'sous-comité', 'Post Type Singular Name', $td ),
             'menu_name'             => __( 'Sous-comités', $td ),
             'name_admin_bar'        => __( 'Sous-comités', $td ),
-            'archives'              => __( 'Archives des sous-comités', $td ),
+            'archives'              => __( 'Sous-comités', $td ),
             'attributes'            => __( 'Attributs du sous-comité', $td ),
             'parent_item_colon'     => __( 'Groupe parent:', $td ),
             'all_items'             => __( 'Tous les sous-comités', $td ),
