@@ -24,7 +24,7 @@ class AddScript implements HooksInterfaces
             });
             jQuery('a[href*="drive.google"]').attr("target", "_blank");
 
-            console.log("<?= get_post( $post )->post_name; ?>");
+            console.log("<?= $_SERVER['PATH_INFO']; ?>");
         </script>
         <?php
     }
