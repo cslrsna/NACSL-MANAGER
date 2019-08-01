@@ -96,7 +96,7 @@ abstract class CptActivites implements CustomsDataInterface
             'publicly_queryable'    => true,
             'rewrite'               => $rewrite,
             'capability_type'       => 'post',
-            'show_in_rest'          => false,
+            'show_in_rest'          => true,
         );
 
         return array(
