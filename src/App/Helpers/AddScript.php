@@ -15,6 +15,7 @@ class AddScript implements HooksInterfaces
 
     public function script()
     {
+        global $post;
         ?>
         <script>
             jQuery("td:contains('Poste vacant')").css({
@@ -23,7 +24,7 @@ class AddScript implements HooksInterfaces
             });
             jQuery('a[href*="drive.google"]').attr("target", "_blank");
 
-            console.log("<?= $_POST ?>");
+            console.log("<?= get_post( $post )->post_name; ?>");
         </script>
         <?php
     }
