@@ -24,7 +24,7 @@ class PagesCorrections implements HooksFrontInterfaces
 
     public function addCss()
     {
-        if ( ! get_permalink() == "https://cslrsna.org/reunions") {
+        if ( $_SERVER['REQUEST_URI'] == "/reunions/") {
             wp_enqueue_style(
                 Config::TEXTDOMAINE . "-css-correction",
                 $this->_config->getPaths('css') . "corrections.css"

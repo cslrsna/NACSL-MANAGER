@@ -24,7 +24,7 @@ class AddScript implements HooksInterfaces
             });
             jQuery('a[href*="drive.google"]').attr("target", "_blank");
 
-            console.log("<?= $_SERVER['REQUEST_URI'] ?>");
+            //console.log("<?//= $_SERVER['REQUEST_URI'] ?>//");
         </script>
         <?php
     }
