@@ -40,7 +40,7 @@ abstract class CptActivites implements CustomsDataInterface
         self::setName();
 
         $labels = array(
-            'name'                  => _x( 'Gestionnaires des activités de Narcotiques Anonymes', 'Post Type General Name', 'nacsl' ),
+            'name'                  => _x( 'Liste des activités CSLRS de Narcotiques Anonymes', 'Post Type General Name', 'nacsl' ),
             'singular_name'         => _x( 'Activité', 'Post Type Singular Name', 'nacsl' ),
             'menu_name'             => __( 'Activités', 'nacsl' ),
             'name_admin_bar'        => __( 'Activités', 'nacsl' ),
@@ -78,7 +78,7 @@ abstract class CptActivites implements CustomsDataInterface
 
         $args = array(
             'label'                 => __( 'Activites', 'nacsl' ),
-            'description'           => __( 'Registre des activités du CSL de Narcotiques Anonymes.', 'nacsl' ),
+            'description'           => __( 'Tous les activités seront affichées sur cette page, revenez souvent pour rester informé des activitées du CSL.', 'nacsl' ),
             'labels'                => $labels,
             'supports'              => array( 'title', 'editor', 'thumbnail'),
             'taxonomies'            => array('category'),
