@@ -17,3 +17,16 @@ This extension add some custom feature to simplify the webmaster job of a CSL wi
 
 *Exemple:*
 [cslrsna.org](https://cslrsna.org)
+
+***
+### In production features
+
+#### meeting metabox
+- address
+- automatic google map
+- meeting specific need
+- [...]
+
+#### synchronise some data with cPanel API.
+- manage mail redirection
+- add mail redirection
