@@ -8,3 +8,11 @@ This extension add some custom feature to simplify the webmaster job of a CSL wi
 - meeting
 - service subcommittee
 - activity
+
+#### Custom taxonomies
+- type of meeting
+- city of the meeting
+- day's of meeting
+
+*Exemple:*
+[cslrsna.org](https://cslrsna.org)
