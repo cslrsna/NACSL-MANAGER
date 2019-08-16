@@ -19,6 +19,7 @@ class CustomTaxonomies implements HooksInterfaces
     private $_labels = array();
     private $_args = array();
     private $_terms = array();
+    private $_showPage;
     private $_cpt;
 
     /***********************************************************************  GETTER */
@@ -53,6 +54,14 @@ class CustomTaxonomies implements HooksInterfaces
     public function getTerms(): array
     {
         return $this->_terms;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getShowPage()
+    {
+        return $this->_showPage;
     }
 
     /**
@@ -100,6 +109,14 @@ class CustomTaxonomies implements HooksInterfaces
     }
 
     /**
+     * @param mixed $showPage
+     */
+    public function setShowPage($showPage): void
+    {
+        $this->_showPage = $showPage;
+    }
+
+    /**
      * @param mixed $cpt
      */
     public function setCpt($cpt): void
@@ -124,6 +141,9 @@ class CustomTaxonomies implements HooksInterfaces
         if ( key_exists( 'terms', $data ) ){
             $this->setTerms( $data['terms'] );
         }
+        if ( key_exists('showPage', $data) ){
+            //TODO: show taxo page
+        }
     }
 
     /***********************************************************************  METHODS  */
@@ -131,7 +151,7 @@ class CustomTaxonomies implements HooksInterfaces
     public function showTag($atts, $content)
     {
         if ( get_terms($this->getName()) ){
-            echo $content . get_the_term_list( get_the_ID(), $this->getName(), " ", " | ", " " );
+            return $content . get_the_term_list( get_the_ID(), $this->getName(), " ", " | ", " " );
         }
     }
 

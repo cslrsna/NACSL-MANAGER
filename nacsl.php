@@ -41,7 +41,6 @@ $nacsl->execute(
 
         new CustomPostTypes( CptGroupes::data() ),
         new CustomPostTypes( CptSousComites::data() ),
-//        new CustomPostTypes( CptServices::data() ),
         new CustomPostTypes( CptActivites::data() ),
 
         new CustomTaxonomies( CptGroupes::getName(), TxFormats::data() ),
