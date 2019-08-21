@@ -148,6 +148,11 @@ class CustomTaxonomies implements HooksInterfaces
 
     /***********************************************************************  METHODS  */
 
+    /**
+     * @param $atts
+     * @param $content
+     * @return string
+     */
     public function showTag($atts, $content)
     {
         if ( get_terms($this->getName()) ){

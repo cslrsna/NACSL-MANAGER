@@ -42,7 +42,7 @@ abstract class CptActivites implements CustomsDataInterface
         $labels = array(
             'name'                  => _x( 'Liste des activités CSLRS de Narcotiques Anonymes', 'Post Type General Name', 'nacsl' ),
             'singular_name'         => _x( 'Activité', 'Post Type Singular Name', 'nacsl' ),
-            'menu_name'             => __( 'Archives', 'nacsl' ),
+            'menu_name'             => __( 'Activités', 'nacsl' ),
             'name_admin_bar'        => __( 'Activités', 'nacsl' ),
             'archives'              => __( 'Archives des activités', 'nacsl' ),
             'attributes'            => __( 'Attributs de l\'activité', 'nacsl' ),
