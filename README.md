@@ -1,6 +1,8 @@
 *Wordpress extension*
 # NACSL-MANAGER
 ***
+#### This is a specific extensio, it's not ready for sharing it.
+***
 
 This extension add some custom feature to simplify the webmaster job of a CSL with managing his WordPress web site.
 
