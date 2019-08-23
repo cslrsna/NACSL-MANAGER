@@ -182,7 +182,7 @@ class CustomTaxonomies implements HooksInterfaces
             );
             $query = new WP_Query( $args );
             // output the term name in a heading tag
-            $html .= '<li><a class="tag-cloud-link" href="/' . $this->getArgs()["rewrite"]["slug"] . "/" . $term->slug  . '">' . $term->name . ' ' .  $term->count . '</a> </li> ';
+            $html .= '<li><a class="tag-cloud-link" href="/' . $this->getArgs()["rewrite"]["slug"] . "/" . $term->slug  . '">' . $term->name . ' (' .  $term->count . ')</a> </li> ';
 
             // use reset postdata to restore orginal query
             wp_reset_postdata();
