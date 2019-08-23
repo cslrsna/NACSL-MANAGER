@@ -1,2 +1,4 @@
 # phpstrom source
-.idea
+.idea/
+.idea/*
+docker-compose.json
