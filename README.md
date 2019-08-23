@@ -1,27 +1,28 @@
-*Wordpress extension*
-# NACSL-MANAGER
-***
-#### This is a specific extensio, it's not ready for sharing it.
+*wordpress extension*
+# nacsl-manager
+```diff
+- this is a specific extension, it's not ready for sharing it.
+```
 ***
 
-This extension add some custom feature to simplify the webmaster job of a CSL with managing his WordPress web site.
+this extension add some custom feature to simplify the webmaster job of a csl with managing his wordpress web site.
 
-#### Custom post type:
+#### custom post type:
 - meeting
 - service subcommittee
 - activity
 
-#### Custom taxonomies
+#### custom taxonomies
 - type of meeting
   - shortcut
 - city of the meeting
 - day's of meeting
 
-*Exemple:*
+*exemple:*
 [cslrsna.org](https://cslrsna.org)
 
 ***
-### In production features
+### in production features
 
 #### meeting metabox
 - address
@@ -29,6 +30,6 @@ This extension add some custom feature to simplify the webmaster job of a CSL wi
 - meeting specific need
 - [...]
 
-#### synchronise some data with cPanel API.
+#### synchronise some data with cpanel api.
 - manage mail redirection
 - add mail redirection
