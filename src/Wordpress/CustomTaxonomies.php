@@ -168,7 +168,7 @@ class CustomTaxonomies implements HooksInterfaces
         $terms = get_terms( $this->getName(), array(
             'taxonomy' => $this->getName(),
             'hide_empty' => 0,
-            "order" => "count"
+            "order" => "ASC"
         ) );
         $html = "<section class='widget widget_tag_cloud'>";
         $html .= "<div class='tagcloud'>";
