@@ -8,6 +8,8 @@
 
 namespace nacsl\Wordpress;
 
+use WP_Query;
+
 /**
  * Class CustomTaxonomies
  * @package nacsl\Wordpress
@@ -160,6 +162,38 @@ class CustomTaxonomies implements HooksInterfaces
         }
     }
 
+    public function ShowTagList($atts, $content)
+    {
+
+        $terms = get_terms( $this->getName(), array(
+            'taxonomy' => $this->getName(),
+            'hide_empty' => 0
+        ) );
+        $html = "<section class='widget widget_tag_cloud'>";
+        $html .= "<div class='tagcloud'>";
+        $html .= "<ul class='wp-tag-cloud'>";
+
+        foreach( $terms as $term ) {
+
+            // Define the query
+            $args = array(
+                $this->getName() => $term->slug,
+            );
+            $query = new WP_Query( $args );
+            // output the term name in a heading tag
+            $html .= '<li><a class="tag-cloud-link" href="/' . $this->getArgs()["rewrite"]["slug"] . "/" . $term->slug  . '">' . $term->name . '</a> </li> ';
+
+            // use reset postdata to restore orginal query
+            wp_reset_postdata();
+
+        }
+
+        $html .= "</ul></div></section>";
+
+        return $html;
+
+    }
+
     public function register()
     {
         register_taxonomy( $this->getName(), $this->getCpt(), $this->getArgs() );
@@ -174,6 +208,7 @@ class CustomTaxonomies implements HooksInterfaces
     {
         add_action( 'init', array( $this, 'register' ), 0 );
         add_shortcode( $this->getName(), array($this,'showTag') );
+        add_shortcode( $this->getName() . "-list", array($this,'showTagList') );
     }
 
 }
