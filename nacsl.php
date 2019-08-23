@@ -16,10 +16,10 @@ require "vendor/autoload.php";
 
 use nacsl\App\Config;
 use nacsl\App\Helpers\AddScript;
+use nacsl\App\Helpers\ModalConsole;
 use nacsl\App\Helpers\PagesCorrections;
 use nacsl\App\Models\CptActivites;
 use nacsl\App\Models\CptGroupes;
-use nacsl\App\Models\CptServices;
 use nacsl\App\Models\CptSousComites;
 use nacsl\App\Models\TxFormats;
 use nacsl\App\Models\TxJours;
@@ -49,6 +49,8 @@ $nacsl->execute(
 
         new AddScript(),
         new PagesCorrections(),
+
+//        new ModalConsole()
 
         //TODO: metabox hooks
     )
