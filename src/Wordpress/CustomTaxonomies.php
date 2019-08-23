@@ -167,7 +167,8 @@ class CustomTaxonomies implements HooksInterfaces
 
         $terms = get_terms( $this->getName(), array(
             'taxonomy' => $this->getName(),
-            'hide_empty' => 0
+            'hide_empty' => 0,
+            "order" => "count"
         ) );
         $html = "<section class='widget widget_tag_cloud'>";
         $html .= "<div class='tagcloud'>";
@@ -177,11 +178,11 @@ class CustomTaxonomies implements HooksInterfaces
 
             // Define the query
             $args = array(
-                $this->getName() => $term->slug,
+                $this->getName() => $term->slug
             );
             $query = new WP_Query( $args );
             // output the term name in a heading tag
-            $html .= '<li><a class="tag-cloud-link" href="/' . $this->getArgs()["rewrite"]["slug"] . "/" . $term->slug  . '">' . $term->name . '</a> </li> ';
+            $html .= '<li><a class="tag-cloud-link" href="/' . $this->getArgs()["rewrite"]["slug"] . "/" . $term->slug  . '">' . $term->name . ' ' .  $term->count . '</a> </li> ';
 
             // use reset postdata to restore orginal query
             wp_reset_postdata();
