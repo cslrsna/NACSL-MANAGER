@@ -46,9 +46,9 @@ abstract class TxFormats implements CustomsDataInterface
         $td = Config::TEXTDOMAINE;
 
         $labels = array(
-            'name'                       => _x( 'Formats de groupes NA', 'Taxonomy General Name', $td ),
-            'singular_name'              => _x( 'Format de groupe NA', 'Taxonomy Singular Name', $td ),
-            'menu_name'                  => __( 'Formats des groupes', $td ),
+            'name'                       => _x( 'Formats de réunions NA', 'Taxonomy General Name', $td ),
+            'singular_name'              => _x( 'Format de réunion NA', 'Taxonomy Singular Name', $td ),
+            'menu_name'                  => __( 'Formats des réunions', $td ),
             'all_items'                  => __( 'Tous les formats', $td ),
             'parent_item'                => __( 'Format parent:', $td ),
             'parent_item_colon'          => __( 'Format parent:', $td ),
