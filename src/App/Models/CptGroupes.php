@@ -70,7 +70,7 @@ abstract class CptGroupes implements CustomsDataInterface
         );
 
         $rewrite = array(
-            'slug'                  => 'toutes-reunions',
+            'slug'                  => 'reunions',
             'with_front'            => true,
             'pages'                 => true,
             'feeds'                 => true,
