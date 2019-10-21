@@ -44,7 +44,7 @@ abstract class CptActivites implements CustomsDataInterface
             'singular_name'         => _x( 'Activité', 'Post Type Singular Name', 'nacsl' ),
             'menu_name'             => __( 'Activités', 'nacsl' ),
             'name_admin_bar'        => __( 'Activités', 'nacsl' ),
-            'archives'              => __( 'Archives des activités', 'nacsl' ),
+            'archives'              => __( 'Activités', 'nacsl' ),
             'attributes'            => __( 'Attributs de l\'activité', 'nacsl' ),
             'parent_item_colon'     => __( 'Réunion parente:', 'nacsl' ),
             'all_items'             => __( 'Tous les activités', 'nacsl' ),
@@ -70,7 +70,7 @@ abstract class CptActivites implements CustomsDataInterface
         );
 
         $rewrite = array(
-            'slug'                  => 'archive-activites',
+            'slug'                  => 'activites',
             'with_front'            => true,
             'pages'                 => true,
             'feeds'                 => true,
