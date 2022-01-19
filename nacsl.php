@@ -34,6 +34,11 @@ use nacsl\Wordpress\CustomTaxonomies;
 use nacsl\App\Views\Popups\CovidPopup;
 
 if ( ! defined( 'ABSPATH' ) ) die( 'No direct access' );
+include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+if ( is_plugin_active('acfcond.php') )
+    deactivate_plugins('acfcond.php');
+if ( is_plugin_active('NACSL-PATCH/covid_popup.php') )
+    deactivate_plugins('NACSL-PATCH/covid_popup.php');
 
 $nacslConfig = Config::getInstance();
 
