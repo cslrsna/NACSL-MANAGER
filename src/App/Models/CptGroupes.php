@@ -80,7 +80,7 @@ abstract class CptGroupes implements CustomsDataInterface
             'label'                 => __( 'Groupe', 'nacsl' ),
             'description'           => __( 'Les réunions de Narcotiques Anonymes sont ouvertes à toutes personnes au prise avec un problème de dépendance lié aux drogues prescrites ou non, mais prises de façon abusive, l\'alcool est consiérée comme une drogue.', 'nacsl' ),
             'labels'                => $labels,
-            'supports'              => array( 'title', 'editor', 'thumbnail'),
+            'supports'              => array( 'title', /* 'editor', */ 'thumbnail'),
             'taxonomies'            => array('category'),
             'hierarchical'          => false,
             'public'                => true,
@@ -96,7 +96,7 @@ abstract class CptGroupes implements CustomsDataInterface
             'publicly_queryable'    => true,
             'rewrite'               => $rewrite,
             'capability_type'       => 'post',
-            'show_in_rest'          => false,
+            'show_in_rest'          => true,
         );
 
         return array(

@@ -4,7 +4,7 @@
 Plugin Name: NACSL Manager
 Plugin URI: http://github.com/cslrsna
 Description: A brief description of the Plugin.
-Version: 1.0.1
+Version: 1.1.0
 Author: webmestre
 Author URI: http://cslrsna.org
 Text Domain: nacsl
@@ -15,7 +15,9 @@ License: GPL3
 require "vendor/autoload.php";
 
 use nacsl\App\Config;
+use nacsl\App\Controllers\CptGroupController;
 use nacsl\App\Helpers\AddScript;
+use nacsl\App\Helpers\CustomsShortcuts;
 use nacsl\App\Helpers\ModalConsole;
 use nacsl\App\Helpers\PagesCorrections;
 use nacsl\App\Models\CptActivites;
@@ -24,9 +26,12 @@ use nacsl\App\Models\CptSousComites;
 use nacsl\App\Models\TxFormats;
 use nacsl\App\Models\TxJours;
 use nacsl\App\Models\TxVilles;
+use nacsl\App\Views\CptGroupView;
+use nacsl\App\Views\OverwriteCss;
 use nacsl\Main;
 use nacsl\Wordpress\CustomPostTypes;
 use nacsl\Wordpress\CustomTaxonomies;
+use nacsl\App\Views\Popups\CovidPopup;
 
 if ( ! defined( 'ABSPATH' ) ) die( 'No direct access' );
 
@@ -49,6 +54,11 @@ $nacsl->execute(
 
         new AddScript(),
         new PagesCorrections(),
+        new CustomsShortcuts(),
+        new CptGroupView(),
+        new CptGroupController(),
+        new OverwriteCss(),
+        new CovidPopup()
 
 //        new ModalConsole()
 

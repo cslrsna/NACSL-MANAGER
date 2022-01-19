@@ -86,14 +86,14 @@ abstract class TxVilles implements CustomsDataInterface
             'show_in_rest'              => true,
         );
         $terms = array(
-            __("Longueuil", $td ),
+            /* __("Longueuil", $td ),
             __("St-Hubert", $td ),
             __("Greenfield Park", $td ),
             __("Lemoyne", $td ),
             __("Ste-Hyacinthe", $td ),
             __("Delson", $td ),
             __("Ste-Julie", $td ),
-            __("Boucherville", $td ),
+            __("Boucherville", $td ), */
         );
 
         return array(
