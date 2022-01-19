@@ -1,0 +1,35 @@
+#covid-advice{
+	display: none;
+	position: absolute;
+	width: 100vw;
+	z-index: 10000;
+	background-color: #228420;
+	top: 0;
+	bottom: 0;
+	text-align: center;
+}
+
+#covid-advice > section{
+	width: 100%;
+	max-width: 600px;
+	padding: 2rem;
+	position: relative;
+	margin: 0 auto;
+}
+
+#covid-advice > section > img{
+	max-width: 100px;
+}
+
+#covid-advice > section > h4, #covid-advice > section > button > a{
+	color: black !important;
+}
+
+#covid-advice > section > h4, #covid-advice > section > h1{	
+    margin: 0 0 .25em;
+    padding: .5em 0 0;
+}
+
+#covid_validation{
+	color:black !important;
+}
