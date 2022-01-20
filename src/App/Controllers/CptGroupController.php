@@ -18,6 +18,8 @@ class CptGroupController implements HooksFrontInterfaces
      */
     public function saveGroup($post_id, $post, $update)
     {
+        if(empty($update))
+            return;
         /**
          * Remove some terms and save post 
          */
@@ -152,8 +154,8 @@ class CptGroupController implements HooksFrontInterfaces
             $query->set(
                 'date_query',
                 array(
-                    'after' => "2020-03-0$today $hour:00.000000",
-                    'before' => "2020-03-0$tomorrow $hour:00.000000"
+                    'after' => "2020-03-0$today $hour:00",
+                    'before' => "2020-03-0$tomorrow $hour:00"
                 )
             );
             
