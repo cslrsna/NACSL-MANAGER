@@ -148,14 +148,14 @@ class CptGroupController implements HooksFrontInterfaces
                     )
                 ) ); */
 
-            $today = date('w')+1;
+            $today = date('w', time() - 18000)+1;
             $tomorrow = $today +1;
             $hour = date('H:i', time() - 3600);
             $query->set(
                 'date_query',
                 array(
-                    'after' => "2020-03-0$today 19:00:00",
-                    'before' => "2020-03-0$tomorrow 19:00:00"
+                    'after' => "2020-03-0$today 00:00:00",
+                    'before' => "2020-03-0$tomorrow 00:00:00"
                 )
             );
             
