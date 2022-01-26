@@ -40,7 +40,7 @@ if ( is_plugin_active('acfcond.php') )
 if ( is_plugin_active('NACSL-PATCH/covid_popup.php') )
     deactivate_plugins('NACSL-PATCH/covid_popup.php');
 
-date_default_timezone_set('America/New_York');
+//date_default_timezone_set('America/New_York');
 
 $nacslConfig = Config::getInstance();
 
