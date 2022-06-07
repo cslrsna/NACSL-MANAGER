@@ -64,8 +64,8 @@ $nacsl->execute(
         new CustomsShortcuts(),
         new CptGroupView(),
         new CptGroupController(),
-        new OverwriteCss(),
-        new CovidPopup()
+        new OverwriteCss()
+        //new CovidPopup()
 
 //        new ModalConsole()
 
