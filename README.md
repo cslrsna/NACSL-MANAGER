@@ -1,5 +1,5 @@
 *wordpress extension*
-# nacsl-manager
+# nacsl-manager 2.0
 ```diff
 - this is a specific extension, it's not ready for sharing it.
 ```
