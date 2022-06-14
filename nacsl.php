@@ -4,7 +4,7 @@
 Plugin Name: NACSL Manager
 Plugin URI: http://github.com/cslrsna
 Description: A brief description of the Plugin.
-Version: 1.1.0
+Version: 1.3.0
 Author: webmestre
 Author URI: http://cslrsna.org
 Text Domain: nacsl
